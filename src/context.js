@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 // make sure to use https
-export const API_ENDPOINT = `http://www.omdbapi.com/?i=tt3896198&apikey=f3442e`
+export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API}`
 
 const AppContext = React.createContext()
 
