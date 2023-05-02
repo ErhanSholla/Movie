@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 // make sure to use https
-export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API}`
+export const API_ENDPOINT = `http://www.omdbapi.com/?i=tt3896198&apikey=f3442e`
 
 const AppContext = React.createContext()
 
@@ -10,7 +10,7 @@ const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([])
   const [query, setQuery] = useState('spider-man')
 
-  const fetchMovies = async (url) => {
+  const fetchMovies = async url => {
     setLoading(true)
     try {
       const response = await fetch(url)
